@@ -1,0 +1,46 @@
+{
+  "name": "@catalog/catalog-ui-context",
+  "version": "0.1.0",
+  "description": "UI context for integrating with the Catalog",
+  "author": "catalog-engineers@qualtrics.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab-app.eng.qops.net:10022/catalog/catalog-ui-context.git"
+  },
+  "publishConfig": {
+    "registry": "http://artifactory.eng.qops.net:8081/artifactory/api/npm/npm-local"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "test": "jest --coverage"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-typescript": "^8.1.0",
+    "@types/jest": "^26.0.13",
+    "jest": "^26.4.2",
+    "rollup": "^2.26.10",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "ts-jest": "^26.3.0",
+    "tslib": "^2.0.1",
+    "typescript": "^4.1.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text"
+    ],
+    "preset": "ts-jest"
+  }
+}
